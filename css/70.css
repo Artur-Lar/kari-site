@@ -23,7 +23,7 @@ body {
 }
 .mainSvg {
   position: absolute;
-  top: 80vh;
+  bottom: 1vh;
   left: 4.2vw;
   padding: 20px;
   background: rgba(153, 30, 102, 0.5);
@@ -132,9 +132,7 @@ h2 {
 
 ul {
   margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 23.58px;
+  font-size: 12px;
   text-align: left;
 }
 
@@ -261,6 +259,7 @@ input[type="email"] {
   background-color: #f5f5f5;
   text-align: center;
   margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .conditions p {
@@ -271,7 +270,7 @@ input[type="email"] {
 .conditions ul {
   list-style-type: none;
   padding: 0;
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-bottom: 20px;
 }
@@ -287,4 +286,11 @@ input[type="email"] {
 .block-conditions-rights {
   width: 95%;
   margin: auto;
+}
+.block-conditions-rights a {
+  text-decoration: none;
+  color: inherit;
+}
+.block-conditions-rights a:hover {
+  text-decoration: underline;
 }
