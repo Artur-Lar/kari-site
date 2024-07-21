@@ -60,13 +60,12 @@
           <div class="textOnImg">
             Скидки на всё<text class="star">*</text> - до 70%!
           </div>
-          <a href="https://kari.com/alternative/summer_sale/">
-            <button
-              class="mainButton"
-              onclick="ym(97882889, 'reachGoal', 'skidka70');"
-            >
-              Перейти к товарам<br />со скидкой
-            </button>
+          <a
+            id="mainButtonLink"
+            href="https://kari.com/alternative/summer_sale/"
+            class="mainButton"
+          >
+            Перейти к товарам<br />со скидкой
           </a>
         </div>
       </div>
@@ -454,29 +453,76 @@
 
     <script>
       document
+        .getElementById("mainButtonLink")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          ym(97882889, "reachGoal", "skidka70");
+          _tmr.push({ type: "reachGoal", id: 3538226, goal: "akciya70" });
+
+          setTimeout(function () {
+            window.location.href = event.currentTarget.href;
+          }, 200);
+        });
+
+      document
         .getElementById("mapImageLink")
         .addEventListener("click", function () {
           ym(97882889, "reachGoal", "karta");
+          _tmr.push({ type: "reachGoal", id: 3538226, goal: "mapSearch" });
+
+          setTimeout(function () {
+            window.location.href = event.currentTarget.href;
+          }, 200);
         });
 
       document
         .getElementById("mapTextLink")
         .addEventListener("click", function () {
           ym(97882889, "reachGoal", "karta");
+          _tmr.push({ type: "reachGoal", id: 3538226, goal: "mapSearch" });
+
+          setTimeout(function () {
+            window.location.href = event.currentTarget.href;
+          }, 200);
         });
+
       document.getElementById("vklink").addEventListener("click", function () {
         ym(97882889, "reachGoal", "VK");
+        _tmr.push({ type: "reachGoal", id: 3538226, goal: "VK" });
+
+        setTimeout(function () {
+          window.location.href = event.currentTarget.href;
+        }, 200);
       });
+
       document.getElementById("tglink").addEventListener("click", function () {
         ym(97882889, "reachGoal", "TG");
+        _tmr.push({ type: "reachGoal", id: 3538226, goal: "TG" });
+
+        setTimeout(function () {
+          window.location.href = event.currentTarget.href;
+        }, 200);
       });
+
       document.getElementById("GPlink").addEventListener("click", function () {
         ym(97882889, "reachGoal", "GPlay");
+        _tmr.push({ type: "reachGoal", id: 3538226, goal: "GooglePlay" });
+
+        setTimeout(function () {
+          window.location.href = event.currentTarget.href;
+        }, 200);
       });
+
       document
         .getElementById("AppStoreLink")
         .addEventListener("click", function () {
           ym(97882889, "reachGoal", "AppStore");
+          _tmr.push({ type: "reachGoal", id: 3538226, goal: "AppStore" });
+
+          setTimeout(function () {
+            window.location.href = event.currentTarget.href;
+          }, 200);
         });
     </script>
 
