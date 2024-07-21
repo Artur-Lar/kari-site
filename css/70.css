@@ -114,6 +114,9 @@ h2 {
 .blockRight {
   position: relative;
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .blockRight {
