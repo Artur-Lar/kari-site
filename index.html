@@ -410,42 +410,51 @@
           alt=""
         /></div
     ></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <!-- Top.Mail.Ru counter -->
+    <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-      var _tmr = window._tmr || (window._tmr = []);
-      _tmr.push({
-        id: "3536163",
-        type: "pageView",
-        start: new Date().getTime(),
-      });
-      (function (d, w, id) {
-        if (d.getElementById(id)) return;
-        var ts = d.createElement("script");
-        ts.type = "text/javascript";
-        ts.async = true;
-        ts.id = id;
-        ts.src = "https://top-fwz1.mail.ru/js/code.js";
-        var f = function () {
-          var s = d.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(ts, s);
-        };
-        if (w.opera == "[object Opera]") {
-          d.addEventListener("DOMContentLoaded", f, false);
-        } else {
-          f();
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
         }
-      })(document, window, "tmr-code");
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(97882889, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
     </script>
-    <noscript
-      ><div>
+    <noscript>
+      <div>
         <img
-          src="https://top-fwz1.mail.ru/counter?id=3536163;js=na"
+          src="https://mc.yandex.ru/watch/97882889"
           style="position: absolute; left: -9999px"
-          alt="Top.Mail.Ru"
-        /></div
-    ></noscript>
-    <!-- /Top.Mail.Ru counter -->
+          alt=""
+        />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <script src="js/70.js"></script>
   </body>
 </html>
