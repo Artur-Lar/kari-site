@@ -234,6 +234,7 @@ input[type="email"] {
 }
 
 .footer-container {
+  max-width: 1440px;
   width: 90%;
   margin: auto;
   display: flex;
