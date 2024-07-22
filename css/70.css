@@ -91,7 +91,7 @@ body {
 .mainButton {
   cursor: pointer;
   position: absolute;
-  bottom: 67px;
+  bottom: 35px;
   right: 4.2vw;
   padding: 10px;
   font-size: 24px;
