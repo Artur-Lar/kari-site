@@ -4,22 +4,32 @@ body {
   margin: 0;
   padding: 0;
 }
+.first-page {
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  .first-page {
+    height: auto;
+  }
+}
 .blocks-container {
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
+  height: calc(100vh - 100px);
   margin: auto;
 }
 @media (max-width: 768px) {
   .blocks-container {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 }
 .main-img-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .mainSvg {
   position: absolute;
@@ -63,6 +73,7 @@ body {
 }
 
 .textOnImg {
+  width: max-content;
   font-size: clamp(16px, 7vw, 48px);
   font-weight: 700;
   text-align: left;
@@ -71,7 +82,8 @@ body {
   backdrop-filter: blur(5px);
   padding: 20px;
   top: 20vh;
-  left: 15%;
+  left: 50%;
+  transform: translate(-50%);
   color: #fff;
   z-index: 2;
 }
@@ -80,7 +92,7 @@ body {
   cursor: pointer;
   position: absolute;
   top: 80%;
-  right: 10%;
+  right: 4.2vw;
   padding: 10px;
   font-size: 24px;
   font-weight: 700;
@@ -127,7 +139,12 @@ h2 {
     margin: auto;
   }
 }
-
+.blockRight p,
+h1,
+h2 {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
 .descriptionOnRight {
   margin-bottom: 20px;
   font-size: 16px;
@@ -228,11 +245,26 @@ input[type="email"] {
   clear: both;
   padding-top: 20px;
   background: #efefef;
+  height: 100px;
 }
 .footer a {
   text-decoration: none;
 }
-
+.footer-for-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+  .footer-for-mobile {
+    display: block;
+    clear: both;
+    padding-top: 20px;
+    background: #efefef;
+    height: auto;
+  }
+}
 .footer-container {
   max-width: 1440px;
   width: 90%;
