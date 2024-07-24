@@ -29,6 +29,7 @@ if (utmMediumLink) {
   linkIds.forEach((id) => {
     const linkElement = document.getElementById(id);
     if (linkElement) {
+      const originalHref = linkElement.href;
       const newHref = addUTMParametersToURL(
         linkElement.href,
         utmSourceLink,
