@@ -1,5 +1,9 @@
 /* Общие стили */
 
+#dynamic-image {
+  display: none;
+}
+
 @font-face {
   font-family: "Circle";
   src: url(../font/circe/CRC55.otf);
