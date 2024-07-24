@@ -3,16 +3,16 @@ function getUTMParameter(name) {
   return urlParams.get(name);
 }
 
-const utmMedium = getUTMParameter("utm_medium");
-console.log("UTM Medium:", utmMedium);
+const utmMediumImage = getUTMParameter("utm_medium");
+console.log("UTM Medium:", utmMediumImage);
 
 const dynamicImage = document.getElementById("dynamic-image");
 console.log("Dynamic Image Element:", dynamicImage);
 
-if (utmMedium) {
+if (utmMediumImage) {
   const validValues = ["26", "kmv", "08", "05", "95", "06", "09", "15", "07"];
-  if (validValues.includes(utmMedium)) {
-    const newSrc = `images/${utmMedium}.jpg`;
+  if (validValues.includes(utmMediumImage)) {
+    const newSrc = `images/${utmMediumImage}.jpg`;
     const img = new Image();
     img.src = newSrc;
     img.onload = () => {
