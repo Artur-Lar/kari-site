@@ -19,7 +19,7 @@ if (utmMediumLink) {
   linkIds.forEach((id) => {
     const linkElement = document.getElementById(id);
     if (linkElement) {
-      const newHref = `${linkElement.href}?utm_source=${utmSourceLink}&utm_medium=${utmMedium}`;
+      const newHref = `${linkElement.href}?utm_source=${utmSourceLink}&utm_medium=${utmMediumLink}`;
       linkElement.href = newHref;
       console.log(`Updated link href for ${id} to:`, newHref);
     }
