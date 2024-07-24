@@ -35,6 +35,7 @@ if (utmMediumLink) {
         utmMediumLink
       );
       linkElement.href = newHref;
+      console.log(`Original link href for ${id}:`, originalHref);
       console.log(`Updated link href for ${id} to:`, newHref);
     }
   });
