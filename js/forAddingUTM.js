@@ -3,8 +3,8 @@ function getUTMParameterLink(name) {
   return urlParams.get(name);
 }
 
-const utmMedium = getUTMParameterLink("utm_medium");
-const utmSource = "kavkaz70";
+const utmMediumValue = getUTMParameterLink("utm_medium");
+const utmSourceValue = "kavkaz70";
 const linkIds = [
   "mainButtonLink",
   "mapImageLink",
@@ -15,7 +15,7 @@ const linkIds = [
   "AppStoreLink",
 ];
 
-if (utmMedium) {
+if (utmMediumValue) {
   linkIds.forEach((id) => {
     const linkElement = document.getElementById(id);
     if (linkElement) {
