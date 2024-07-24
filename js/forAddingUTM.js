@@ -1,9 +1,9 @@
-function getUTMParameter(name) {
+function getUTMParameterLink(name) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
 }
 
-const utmMedium = getUTMParameter("utm_medium");
+const utmMedium = getUTMParameterLink("utm_medium");
 const utmSource = "kavkaz70";
 const linkIds = [
   "mainButtonLink",
