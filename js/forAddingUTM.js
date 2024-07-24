@@ -1,10 +1,11 @@
-function getUTMParameterLink(name) {
+function getUTMParameter(name) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
 }
 
-const utmMediumLink = getUTMParameterLink("utm_medium");
-const utmSourceLink = "kavkaz70";
+const utmMediumLink = getUTMParameter("utm_medium");
+const utmSourceLink = "kavkaz70"; // Статическое значение utm_source
+
 const linkIds = [
   "mainButtonLink",
   "mapImageLink",
@@ -15,11 +16,24 @@ const linkIds = [
   "AppStoreLink",
 ];
 
+function addUTMParametersToURL(url, utmSource, utmMedium) {
+  const urlObj = new URL(url);
+  const params = new URLSearchParams(urlObj.search);
+  params.set("utm_source", utmSource);
+  params.set("utm_medium", utmMedium);
+  urlObj.search = params.toString();
+  return urlObj.toString();
+}
+
 if (utmMediumLink) {
   linkIds.forEach((id) => {
     const linkElement = document.getElementById(id);
     if (linkElement) {
-      const newHref = `${linkElement.href}?utm_source=${utmSourceLink}&utm_medium=${utmMediumLink}`;
+      const newHref = addUTMParametersToURL(
+        linkElement.href,
+        utmSourceLink,
+        utmMediumLink
+      );
       linkElement.href = newHref;
       console.log(`Updated link href for ${id} to:`, newHref);
     }
