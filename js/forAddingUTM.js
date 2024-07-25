@@ -4,7 +4,7 @@ function getUTMParameter(name) {
 }
 
 const utmMediumLink = getUTMParameter("utm_medium");
-const utmSourceLink = "kavkaz70"; // Статическое значение utm_source
+const utmSourceLink = "kavkaz70";
 
 const linkIds = [
   "mainButtonLink",
@@ -29,15 +29,12 @@ if (utmMediumLink) {
   linkIds.forEach((id) => {
     const linkElement = document.getElementById(id);
     if (linkElement) {
-      const originalHref = linkElement.href;
       const newHref = addUTMParametersToURL(
         linkElement.href,
         utmSourceLink,
         utmMediumLink
       );
       linkElement.href = newHref;
-      console.log(`Original link href for ${id}:`, originalHref);
-      console.log(`Updated link href for ${id} to:`, newHref);
     }
   });
 }
